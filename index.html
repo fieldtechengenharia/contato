@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fieldtech Engenharia Elétrica</title>
+<meta name="description" content="Projetos elétricos, laudos e regularização. Fale com a Fieldtech Engenharia Elétrica.">
+<meta name="theme-color" content="#14202b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  /* ====== PERSONALIZAÇÃO: mude as cores aqui ====== */
+  :root{
+    --verde:#85bb25;
+    --verde-escuro:#6a9a1a;
+    --fundo:#14202b;
+    --card:#1c2b38;
+    --texto:#f2f5f7;
+    --texto-suave:#a9b7c2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:'DM Sans',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--fundo);color:var(--texto);
+    min-height:100vh;display:flex;justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .pagina{width:100%;max-width:460px;padding:0 20px 40px}
+
+  /* Topo */
+  .topo{
+    text-align:center;padding:48px 0 28px;position:relative;
+  }
+  .topo::before{
+    content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);
+    width:280px;height:180px;
+    background:radial-gradient(closest-side,rgba(133,187,37,.28),transparent);
+    pointer-events:none;
+  }
+  .logo{display:block;width:260px;max-width:82%;height:auto;margin:0 auto;position:relative}
+  .marca{
+    font-family:'Bebas Neue',Impact,sans-serif;
+    font-size:58px;letter-spacing:3px;line-height:1;position:relative;
+  }
+  .marca b{color:var(--verde);font-weight:400}
+  .sub{
+    margin-top:6px;font-size:12px;letter-spacing:5px;text-transform:uppercase;
+    color:var(--verde);position:relative;
+  }
+  .apresentacao{
+    margin:22px auto 0;max-width:340px;color:var(--texto-suave);
+    font-size:15px;line-height:1.55;position:relative;
+  }
+
+  /* Botões */
+  .botoes{display:flex;flex-direction:column;gap:12px;margin-top:8px}
+  .botao{
+    display:flex;align-items:center;gap:14px;
+    padding:16px 18px;border-radius:14px;
+    background:var(--card);color:var(--texto);text-decoration:none;
+    border:1px solid rgba(255,255,255,.06);
+    transition:transform .15s,border-color .15s,background .15s;
+    font-size:16px;font-weight:500;
+  }
+  .botao:hover,.botao:focus-visible{transform:translateY(-2px);border-color:var(--verde);outline:none}
+  .botao .icone{
+    flex:none;width:42px;height:42px;border-radius:11px;
+    display:grid;place-items:center;background:rgba(133,187,37,.14);
+  }
+  .botao svg{width:22px;height:22px;fill:none;stroke:var(--verde);stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  .botao small{display:block;font-size:13px;color:var(--texto-suave);font-weight:400;margin-top:2px}
+  .botao.principal{background:var(--verde);color:#10200a;border-color:transparent}
+  .botao.principal .icone{background:rgba(16,32,10,.14)}
+  .botao.principal svg{stroke:#10200a}
+  .botao.principal small{color:rgba(16,32,10,.75)}
+  .botao.principal:hover{background:var(--verde-escuro);border-color:transparent}
+  button.botao{width:100%;font-family:inherit;cursor:pointer;text-align:left}
+
+  /* Serviços */
+  h2{
+    font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;
+    font-size:26px;letter-spacing:2px;margin:38px 0 14px;
+    display:flex;align-items:center;gap:10px;
+  }
+  h2::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.1)}
+  .servicos{list-style:none;display:grid;gap:10px}
+  .servicos li{
+    background:var(--card);border-radius:12px;padding:14px 16px;
+    border-left:3px solid var(--verde);font-size:15px;line-height:1.4;
+  }
+  .servicos li span{display:block;color:var(--texto-suave);font-size:13px;margin-top:3px}
+
+  /* Rodapé */
+  footer{
+    margin-top:40px;text-align:center;color:var(--texto-suave);
+    font-size:12.5px;line-height:1.7;
+  }
+  footer strong{color:var(--texto);font-weight:500}
+</style>
+</head>
+<body>
+<main class="pagina">
+
+  <header class="topo">
+    <img class="logo" src="data:image/png;base64,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" alt="Fieldtech Engenharia Elétrica">
+    <p class="apresentacao">
+      Projetos elétricos com segurança, norma e clareza do primeiro traço à entrega.
+    </p>
+  </header>
+
+  <nav class="botoes" aria-label="Contato">
+    <a class="botao principal" id="zap" target="_blank" rel="noopener"
+       href="https://wa.me/5514997386170?text=Ol%C3%A1%21%20Vim%20pelo%20QR%20code%20do%20projeto%20el%C3%A9trico%20e%20gostaria%20de%20falar%20com%20a%20Fieldtech.">
+      <span class="icone"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5Z"/><path d="M9 8.5c.3 2.6 2.900 5.200 6 6l1.200-1.400-2.200-1.100-.9.800a5 5 0 0 1-2-2l.8-.9L10.800 7.700Z"/></svg></span>
+      <span>Falar no WhatsApp<small>(14) 99738-6170</small></span>
+    </a>
+
+    <a class="botao" href="mailto:fieldtechengenharia@gmail.com?subject=Contato%20pelo%20projeto">
+      <span class="icone"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.500"/><path d="m3.500 7 8.500 6.500L20.500 7"/></svg></span>
+      <span>Enviar e-mail<small>fieldtechengenharia@gmail.com</small></span>
+    </a>
+
+    <a class="botao" href="https://instagram.com/fieldtechengenharia" target="_blank" rel="noopener">
+      <span class="icone"><svg viewBox="0 0 24 24"><rect x="3.500" y="3.500" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6"/></svg></span>
+      <span>Seguir no Instagram<small>@fieldtechengenharia</small></span>
+    </a>
+
+    <button class="botao" id="salvar" type="button">
+      <span class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4.500 20a7.500 7.500 0 0 1 15 0"/></svg></span>
+      <span>Salvar contato<small>Adicionar à agenda do celular</small></span>
+    </button>
+  </nav>
+
+
+  <footer>
+    <strong>Fieldtech Engenharia Elétrica</strong><br>
+    CNPJ 63.714.754/0001-23
+  </footer>
+
+</main>
+
+<script>
+  // Botão "Salvar contato": gera o cartão (.vcf) e baixa no aparelho
+  document.getElementById('salvar').addEventListener('click', function () {
+    var vcf = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N;CHARSET=UTF-8:;Fieldtech Engenharia Elétrica;;;',
+      'FN;CHARSET=UTF-8:Fieldtech Engenharia Elétrica',
+      'ORG;CHARSET=UTF-8:Fieldtech Engenharia Elétrica',
+      'TEL;TYPE=CELL:+5514997386170',
+      'EMAIL;TYPE=WORK:fieldtechengenharia@gmail.com',
+      'URL:https://instagram.com/fieldtechengenharia',
+      'END:VCARD'
+    ].join('\r\n');
+    var blob = new Blob([vcf], { type: 'text/vcard;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url; a.download = 'Fieldtech.vcf';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+  });
+</script>
+</body>
+</html>
